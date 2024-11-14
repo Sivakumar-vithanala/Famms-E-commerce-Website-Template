@@ -41,12 +41,7 @@ header {
 
 
 
-
-
-
-
-
-/* item-1 */
+/*.....................item-1..................*/
 
 
 .item-1 {
@@ -99,7 +94,7 @@ header {
 }
 
 
-/* item-2 */
+/*....................item-2..........................*/
 
 .div-2 {
     width: 100 vh;
@@ -121,7 +116,7 @@ header {
 
 .delivery {
     display: flex;
-    display: block;
+    flex-direction: column;
     height: 270px;
     width: 370px;
     background-color: rgb(11, 11, 79);
@@ -133,7 +128,7 @@ header {
 
 .delivery-icon {
     font-size: 3rem;
-    padding-top: 40px;
+    padding-top: 30px;
     padding-bottom: 20px;
     margin-left: 42%;
 }
@@ -153,7 +148,7 @@ p {
 
 
 
-/* item-3 */
+/*....................item-3......................*/
 
 
 .item-3 {
@@ -191,7 +186,7 @@ p {
 
 
 
-/* item-4 */
+/*...........................item-4......................*/
 
 
 
@@ -247,7 +242,7 @@ p {
 
 
 
-/* item-5 */
+/*............................item-5............................*/
 
 
 .div-5 {
@@ -294,7 +289,7 @@ p {
 }
 
 
-/* item-6 */
+/*....................item-6..................*/
 
 .div-6 {
     display: flex;
@@ -334,49 +329,83 @@ p {
 
 
 
-/* footer */
+/*.................footer......................*/
 
 
 
 
-.div-7{
+.div-7 {
     display: flex;
-    background-color: #ccc;
+    background-color: #f6f3f3;
     margin-top: 400px;
     justify-content: space-evenly;
     line-height: 12px;
     padding: 75px;
 }
 
-.div-8>img{
-   display: block; 
-   width: 210px;
-   height: 37px;
+.div-8>img {
+    display: block;
+    width: 210px;
+    height: 37px;
 }
-.div-8>p{
+
+.div-8>p {
     padding: 17px;
-   text-align: start;
+    text-align: start;
 }
 
-.div-9>h2{
+.div-9>h2 {
     padding-bottom: 20px;
     font-size: 24px;
     font-weight: 625;
 }
 
-.div-10>h2{
+.div-10>h2 {
     padding-bottom: 20px;
     font-size: 24px;
     font-weight: 625;
 }
-.div-11>h2{
+
+.div-11>h2 {
     padding-bottom: 20px;
     font-size: 24px;
     font-weight: 625;
-   
 }
-.div-11>.sub-input{
-   padding: 20px;
-   width: 300px;
-   height: 50px;
+
+.div-12 {
+    display: flex;
+    height: 45px;
+    width: 15vw;
+    border: 1px solid;
+}
+
+.div-12>.sub-input {
+    width: 70%;
+}
+
+.div-12>.sub-sub {
+    width: 30%;
+    background-color: red;
+}
+
+
+/* .............copy right........... */
+
+.copy-right{
+    height: 85px;
+    background: #2f2d2d;
+}
+.copy-right>p{
+    color: white;
+    margin: 0px;
+    line-height: 15px;
+    padding-top: 12px;
+}
+
+
+/*................. Media Quries............ */
+
+
+@media screen and (max-width:500px) {
+    
 }
