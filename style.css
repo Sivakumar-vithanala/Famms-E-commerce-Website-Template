@@ -3,6 +3,9 @@
     margin: 0px;
     box-sizing: border-box;
 }
+/* body{
+    overflow-x: hidden;
+} */
 
 header {
     display: flex;
@@ -26,15 +29,15 @@ header {
     color: lightsalmon;
 }
 
-.text-icon{
+.text-icon {
     display: none;
 }
 
-#checkbox+.dropdown{
+#checkbox+.dropdown {
     display: none;
 }
 
-#checkbox:checked+.dropdown{
+#checkbox:checked+.dropdown {
     display: flex;
     flex-direction: column;
     font-size: 16px;
@@ -52,12 +55,13 @@ header {
     padding-top: 15px;
     padding-left: 15px;
 }
-.dropdown>span:hover{
+
+.dropdown>span:hover {
     color: red;
     background-color: lightpink;
 }
 
-#checkbox{
+#checkbox {
     display: none;
 }
 
@@ -67,11 +71,12 @@ header {
 
 
 .item-1 {
-    width: 100 vh;
+    /* width: 100vh; */
     height: 650px;
     background-image: url(./Images/slider-bg.jpg);
+    background-size: 100% 100%;
+    background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
 }
 
@@ -119,10 +124,9 @@ header {
 /*....................item-2..........................*/
 
 .div-2 {
-    width: 100 vh;
-    height: 535px;
     display: flex;
     justify-content: center;
+    height: 450px;
     gap: 23px;
 
 }
@@ -174,10 +178,11 @@ p {
 
 
 .item-3 {
-    width: 100 vw;
-    height: 800px;
+    /* width: 100vw; */
+    height: 620px;
     background-image: url(./Images/arrival-bg.png);
-    background-size: cover;
+    background-size: 100% 100%;
+    background-position: center center;
     background-repeat: no-repeat;
     position: relative;
 }
@@ -223,10 +228,10 @@ p {
 .grid-container {
     display: grid;
     position: relative;
-    grid-template-columns: repeat(3, 0.2fr);
+    grid-template-columns: repeat(3, 1fr);
     place-items: center;
-    gap: 20px;
-    padding-left: 200px;
+    gap: 20px 0px;
+    /* padding-left: 200px; */
 
 }
 
@@ -243,15 +248,10 @@ p {
     text-align: center;
 }
 
-/* .grid-container-cloths {
-    width: 320px;
-    height: 320px;
-    padding: 70px; 
-} */
 .one>img {
     width: 320px;
     height: 320px;
-    padding: 70px; 
+    padding: 70px;
 }
 
 .grid-container-products {
@@ -262,13 +262,15 @@ p {
     border-radius: 5px;
     position: absolute;
     top: 1700px;
+    cursor: pointer;
 }
 
 .grid-container-products:hover {
+    
     background-color: white;
 }
 
-.one-hide{
+.one-hide {
     display: none;
     background-color: transparent;
     width: 100%;
@@ -278,7 +280,8 @@ p {
     margin-top: -150px;
     height: 100%;
 }
-.one-hide>.top-btn{
+
+.one-hide>.top-btn {
     background-color: red;
     border: 2px solid red;
     padding: 10px 30px;
@@ -286,13 +289,14 @@ p {
     color: white;
     transition: 1s;
 }
-.one-hide>.top-btn:hover{
+
+.one-hide>.top-btn:hover {
     background-color: transparent;
     color: red;
 }
 
 
-.one-hide>.down-btn{
+.one-hide>.down-btn {
     background-color: black;
     border: 2px solid black;
     padding: 10px 40px;
@@ -300,13 +304,14 @@ p {
     color: white;
     transition: 1s;
 }
-.one-hide>.down-btn:hover{
+
+.one-hide>.down-btn:hover {
     background-color: transparent;
     color: black;
 }
 
 
-.one:hover>.one-hide{
+.one:hover>.one-hide {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -350,9 +355,11 @@ p {
     outline: none;
     margin: 20px;
 }
-::placeholder{
+
+::placeholder {
     padding: 10px;
 }
+
 .div-5>button {
     border: 2px solid red;
     width: 280px;
@@ -470,41 +477,41 @@ p {
 
 /* .............copy right........... */
 
-.copy-right{
+.copy-right {
     height: 85px;
     background: #2f2d2d;
 }
-.copy-right>p{
+
+.copy-right>p {
     color: white;
     margin: 0px;
     line-height: 15px;
     padding-top: 12px;
 }
-#checkboxHam{
+
+#checkboxHam {
     display: none;
 }
 
 
 
 
-
-
-
-/*................. Media Quries............ */
-
+/*................. Media Quries.. <=650............ */
 
 
 
 
 
-
-
-@media screen and (max-width:650px)  {
-    header{
+@media screen and (max-width:650px) {
+    header {
         position: relative;
-        
     }
-    .container-2{
+    .container-1{
+        padding: 0;
+        margin-left: 20px;
+    }
+
+    .container-2 {
         display: none;
         background-color: #eee;
         flex-direction: column;
@@ -516,167 +523,343 @@ p {
         width: 50vw;
         z-index: 1;
     }
-    /* .dropdown>span{
-        display: flex;
-        flex-direction: column;
-       text-align: center;
-    } */
-    .text-icon{
+
+    .text-icon {
         display: block;
         font-size: 2rem;
         font-weight: 700;
+        margin-right: 20px;
     }
-    header{
+
+    header {
         display: flex;
         justify-content: space-between;
     }
-    #checkboxHam:checked+.container-2{
+
+    #checkboxHam:checked+.container-2 {
         display: flex;
     }
 
     /* <!--................ item-1............ --> */
 
-.item-1{
-    background-image: none;
-    margin: 0px;
-    padding: 0px;
-}
-.item-1{
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-   
-}
+    .item-1 {
+        /* background-image: none; */
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .div-1 {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        margin-left: -150px;
+    }
 
 
 
 
     /* <!-- ............item-2 ..............--> */
 
-    .div-2{
+    .div-2 {
         display: flex;
         flex-direction: column;
         align-items: center;
         height: 100vh;
         padding: 20px;
     }
-    .why-shop{
+
+    .why-shop {
         display: flex;
         flex-direction: row;
         align-items: center;
         font-size: 45px;
-        padding: 30px;
+        padding-bottom: 120px;
     }
 
 
     /* <!-- .............item-3.............. --> */
 
-    .item-3{
-        background-image: none;
+    .item-3 {
+        /* background-image: ;    */
+        margin: 150px 0px;
     }
-    .div-3{
-        margin-top: -130px;
-        margin-left: -140vw;
+
+    .div-3 {
+        /* margin-top: -130px; */
+        margin-left: -95vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-       }
+
+    }
 
 
     /* <!-- ...................item-4 .................--> */
-    .div-4{
+
+
+    .div-4 {
         text-align: center;
         margin-top: -55vh;
     }
-    .div-4>.our-products{
+
+    .div-4>.our-products {
         font-size: 45px;
     }
 
-    .grid-container{
+    .grid-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 0px;
     }
-    .grid-container-products{
+
+    .grid-container-products {
         align-items: center;
         position: absolute;
         top: 4950px;
-}
+    }
 
-    
+
     /* <!--.................... item-5 ...............--> */
 
 
-.div-5{
-    display: flex;
-    width: 80vw;
-    height: 80vh;
-    align-items: center;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    margin-left: 50px;
-
-}
-.div-5>input{
-    
-}
-
-/* <!-- .................item-6..................... --> */
-
-   .div-6{
-    display: flex;
-    height: 80vw;
-    width: 60vw;
-    flex-direction: column;
-    align-items: center;
-   }
-
-   .div-6>h1{
-    font-size: 38px;
-    text-align: center;
-   }
-
-
-   /* FOOTER */
-   .div-7{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.div-8{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.div-11{
-    text-align: center;
-}
-.div-12{
-    width: 80vw;
-}
-.copy-right{
-    width: 100vw;
-    margin: 20px 0px 0px 0px;
-}
-
-}
-
-
-
-/* ............media quries-2............. */
-
-@media screen and (min-width:651px) and (max-width:1000px){
-    header{
+    .div-5 {
         display: flex;
+        width: 100vw;
+        height: 80vh;
+        align-items: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+
+
+    /* <!-- .................item-6..................... --> */
+
+    .div-6 {
+        display: flex;
+        height: 80vw;
+        width: 60vw;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .div-6>h1 {
+        font-size: 38px;
+        text-align: center;
+    }
+
+
+    /* FOOTER */
+    .div-7 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .div-8 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .div-11 {
+        text-align: center;
+    }
+
+    .div-12 {
+        width: 80vw;
+    }
+
+    .copy-right {
+        width: 100vw;
+        margin: 20px 0px 0px 0px;
+    }
+
+}
+
+
+
+/* ............media quries-2   650 to 9999............. */
+
+
+
+
+@media screen and (min-width:650px) and (max-width:999px) {
+    header {
+        position: relative;
+    }
+
+    .container-2 {
+        display: none;
+        background-color: #eee;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 67px;
+        left: 0px;
+        width: 50vw;
+        z-index: 1;
+    }
+    .text-icon {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-right: 20px;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #checkboxHam:checked+.container-2 {
+        display: flex;
+    }
+
+
+
+    /* .......item-1........... */
+    .div-1 {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        margin-left: -100px;
+    }
+    .div-1-heading{
+        font-size: 54px;
         
     }
-    .container-2{
-        flex-direction: row;
+    .div-1-pera {
+        font-size: 14px;
     }
+    .div-1-shop-now-btn {
+        font-size: 16px;
+        font-weight: 650;
+        line-height: 20px;
+        padding: 10px 45px;
+        margin-top: 10px;
+
+    }
+    
+
+
+/* ..........item-2............... */
+
+.div-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50vh;
+    padding: 80px;
+}
+
+.why-shop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 45px;
+    padding-bottom: 50px;
+}
+
+
+/* .............item-3.......... */
+
+
+.item-3 {
+    /* background-image: ; */
+    margin: 150px 0px;
+    /* place-items: center; */
+}
+
+.div-3 {
+    /* margin-top: -130px; */
+    margin-left: -55vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/* .................item-4............ */
+
+
+.div-4 {
+    margin-top: -150px;
+}
+
+.div-4>.our-products {
+    font-size: 35px;
+}
+
+.grid-container { 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    gap: 15px;
+}
+
+.grid-container-products {
+    position: absolute;
+    top: 2450px;
+    left: 40%;
+}
+
+
+.one {
+    width: 270px;
+    height: 380px;
+    display: block;
+    display: grid;
+    flex-direction: column;
+    text-align: center;
+}
+
+.one>img {
+    width: 250px;
+    height: 250px;
+    padding: 30px;
+}
+.one>h3{
+    font-size: 20px;
+}
+
+/* ............item-6......... */
+.div-6{
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+    height: 320px;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+.div-6>img{
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* ....... footer...........*/
+
+
+.div-7{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.div-12 {
+    width: 100%;
+}
 }
